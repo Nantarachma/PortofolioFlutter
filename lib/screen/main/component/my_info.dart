@@ -22,6 +22,10 @@ class MyInfo extends StatelessWidget {
               style: Theme.of(context).textTheme.titleMedium,
             ),
             Text(
+              "UPN Veteran Jawa Timur", textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.titleSmall,
+            ),
+            Text(
               "Informatics", textAlign: TextAlign.center,
               style: TextStyle(fontWeight: FontWeight.w200, height: 1.5),
             ),

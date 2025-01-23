@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-const primaryColor = Color(0xFF2D148A);
-const secondaryColor = Color(0xFF242430);
-const darkColor = Color(0xFF191923);
-const bodyTextColor = Color(0xFF8B8B8D);
-const bgColor = Color(0xFF1E1E28);
+const primaryColor = Color(0xFF0077B6); // Aquatic Blue
+const secondaryColor = Color(0xFF00B4D8); // Light Blue
+const darkColor = Color(0xFF023E8A); // Dark Blue
+const bodyTextColor = Color(0xFF90E0EF); // Light Aquatic
+const bgColor = Color(0xFFCAF0F8); // Very Light Blue
 
 const defaultPadding = 20.0;
 const defaultDuration = Duration(seconds: 1); // we use it on our animation

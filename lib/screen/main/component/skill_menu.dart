@@ -1,24 +1,96 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio_website/constaint.dart';
-import 'package:portofolio_website/screen/main/component/skill.dart';
 
 class SkillMenu extends StatelessWidget {
   const SkillMenu({
-    Key? key, required this.image1, required this.text1, required this.image2, required this.text2, required this.image3, required this.text3,
+    Key? key, required this.hardSkills, required this.softSkills, required this.tools,
   }) : super(key: key);
 
-  final String image1, text1, image2, text2, image3, text3;
+  final List<String> hardSkills;
+  final List<String> softSkills;
+  final List<String> tools;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Column(
       children: [
-        SkillSet(image: image1, text: text1,),
-        SizedBox(width: defaultPadding),
-        SkillSet(image: image2, text: text2,),
-        SizedBox(width: defaultPadding),
-        (image3 != '' && text3 != '') ? SkillSet(image: image3, text: text3,) : SizedBox(height: 0,),
+        Text(
+          "Hard Skills",
+          style: Theme.of(context).textTheme.titleSmall,
+        ),
+        SizedBox(height: defaultPadding),
+        Container(
+          color: Colors.black.withOpacity(0),
+          child: GridView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 3,
+            ),
+            itemCount: hardSkills.length,
+            itemBuilder: (context, index) {
+              return Center(
+                child: Text(
+                  hardSkills[index],
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              );
+            },
+          ),
+        ),
+        SizedBox(height: defaultPadding),
+        Text(
+          "Soft Skills",
+          style: Theme.of(context).textTheme.titleSmall,
+        ),
+        SizedBox(height: defaultPadding),
+        Container(
+          color: Colors.black.withOpacity(0),
+          child: GridView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 3,
+            ),
+            itemCount: softSkills.length,
+            itemBuilder: (context, index) {
+              return Center(
+                child: Text(
+                  softSkills[index],
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              );
+            },
+          ),
+        ),
+        SizedBox(height: defaultPadding),
+        Text(
+          "Tools",
+          style: Theme.of(context).textTheme.titleSmall,
+        ),
+        SizedBox(height: defaultPadding),
+        Container(
+          color: Colors.black.withOpacity(0),
+          child: GridView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 3,
+            ),
+            itemCount: tools.length,
+            itemBuilder: (context, index) {
+              return Center(
+                child: Text(
+                  tools[index],
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              );
+            },
+          ),
+        ),
       ],
     );
   }

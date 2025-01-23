@@ -13,42 +13,28 @@ class SideMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: SingleChildScrollView(
-      padding: EdgeInsets.all(defaultPadding),
-      child: Column(
-        children: [
-          Text(
-            "Skills",
-            style: Theme.of(context).textTheme.titleSmall,
+          padding: EdgeInsets.all(defaultPadding),
+          child: Column(
+            children: [
+              Text(
+                "Skills",
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              SizedBox(
+                height: defaultPadding,
+              ),
+              SkillMenu(
+                hardSkills: ['Kotlin', 'Flutter', 'Node.js', 'Git', 'Python'],
+                softSkills: ['Creative Thinking', 'Strategic Planning', 'Public Relation', 'Teamwork'],
+                tools: ['Android Studio', 'VS Code', 'Postman', 'Figma'],
+              ),
+              SizedBox(height: defaultPadding),
+              Divider(),
+              SizedBox(height: defaultPadding),
+              DownloadCV(),
+              SocialMedia(),
+            ],
           ),
-          SizedBox(
-            height: defaultPadding,
-          ),
-          SkillMenu(
-            image1: 'images/flutter.png',
-            text1: 'Flutter',
-            image2: 'images/java.png',
-            text2: 'Java',
-            image3: 'images/mysql.png',
-            text3: 'MySQL',
-          ),
-          SizedBox(
-            height: defaultPadding,
-          ),
-          SkillMenu(
-            image1: 'images/php.png',
-            text1: 'Php',
-            image2: 'images/firebase.png',
-            text2: 'Firebase',
-            image3: 'images/git.png',
-            text3: 'Git',
-          ),
-          SizedBox(height: defaultPadding),
-          Divider(),
-          SizedBox(height: defaultPadding),
-          DownloadCV(),
-          SocialMedia(),
-        ],
-      ),
-    ));
+        ));
   }
 }

@@ -6,8 +6,8 @@ import 'package:portofolio_website/screen/home/component/card_widget.dart';
 class ProjectGridView extends StatelessWidget {
   const ProjectGridView({
     Key? key,
-    this.crossAxisCount = 3,
-    this.childAspectRatio = 1.3,
+    this.crossAxisCount = 2,
+    this.childAspectRatio = 3,
   }) : super(key: key);
 
   final int crossAxisCount;

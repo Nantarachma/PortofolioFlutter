@@ -17,7 +17,7 @@ class TextBanner extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "This is my \nPortofolio!",
+            "Welcome to my \nWebsite Portofolio!",
             style: Responsive.isDesktop(context)
                 ? Theme.of(context)
                     .textTheme

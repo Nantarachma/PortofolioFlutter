@@ -10,18 +10,38 @@ class HomeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: Responsive.isMobile(context) ? 2 : 3,
-      child: Stack(
-        fit: StackFit.expand,
-        children: [
-          Image.asset(
-            "assets/images/bg.jpeg",
-            fit: BoxFit.cover,
+    return SizedBox(
+      width: double.infinity,
+      child: AspectRatio(
+        aspectRatio: Responsive.isMobile(context) ? 2 : 3,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(16.0),
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              Image.asset(
+                "assets/images/bg.jpeg",
+                fit: BoxFit.cover,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      darkColor.withOpacity(0.7),
+                      darkColor.withOpacity(0.3),
+                    ],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(defaultPadding),
+                child: TextBanner(),
+              ),
+            ],
           ),
-          Container(color: darkColor.withOpacity(0.66)),
-          TextBanner(),
-        ],
+        ),
       ),
     );
   }

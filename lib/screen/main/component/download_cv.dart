@@ -26,8 +26,6 @@ class DownloadCV extends StatelessWidget {
               "Link to CV",
               style: Theme.of(context).textTheme.bodyLarge!,
             ),
-            SizedBox(width: defaultPadding / 2),
-            SvgPicture.asset("assets/icons/download.svg"),
           ],
         ),
       ),
