@@ -28,22 +28,21 @@ class MyProject extends StatelessWidget {
           Responsive(
             mobile: Padding(
               padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-              child: ExperienceGridView(crossAxisCount: 1, childAspectRatio: 1.7),
+              child: ExperienceGridView(crossAxisCount: 1, childAspectRatio: 1.0),
             ),
             mobileLarge: Padding(
               padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-              child: ExperienceGridView(crossAxisCount: 2),
+              child: ExperienceGridView(crossAxisCount: 2, childAspectRatio: 1.3),
             ),
             tablet: Padding(
               padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-              child: ExperienceGridView(childAspectRatio: 1.1),
+              child: ExperienceGridView(crossAxisCount: 2, childAspectRatio: 1.5),
             ),
             desktop: Padding(
               padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-              child: ExperienceGridView(),
+              child: ExperienceGridView(crossAxisCount: 2, childAspectRatio: 2),
             ),
           ),
-          SizedBox(height: defaultPadding),
           SizedBox(height: defaultPadding),
           Text(
             "My Projects",
@@ -55,22 +54,21 @@ class MyProject extends StatelessWidget {
           Responsive(
             mobile: Padding(
               padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-              child: ProjectGridView(crossAxisCount: 1, childAspectRatio: 1.7),
+              child: ProjectGridView(crossAxisCount: 1, childAspectRatio: 1.5),
             ),
             mobileLarge: Padding(
               padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-              child: ProjectGridView(crossAxisCount: 2),
+              child: ProjectGridView(crossAxisCount: 2, childAspectRatio: 1.5),
             ),
             tablet: Padding(
               padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-              child: ProjectGridView(childAspectRatio: 1.1),
+              child: ProjectGridView(crossAxisCount: 2, childAspectRatio: 1.7),
             ),
             desktop: Padding(
               padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-              child: ProjectGridView(),
+              child: ProjectGridView(crossAxisCount: 2, childAspectRatio: 2.5),
             ),
           ),
-          SizedBox(height: defaultPadding),
           SizedBox(height: defaultPadding),
           Text(
             "Certificates",
@@ -86,15 +84,15 @@ class MyProject extends StatelessWidget {
             ),
             mobileLarge: Padding(
               padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-              child: CertificateGridView(crossAxisCount: 2),
+              child: CertificateGridView(crossAxisCount: 2, childAspectRatio: 1.5),
             ),
             tablet: Padding(
               padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-              child: CertificateGridView(childAspectRatio: 1.1),
+              child: CertificateGridView(crossAxisCount: 3, childAspectRatio: 1.1),
             ),
             desktop: Padding(
               padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-              child: CertificateGridView(),
+              child: CertificateGridView(crossAxisCount: 4, childAspectRatio: 1.0),
             ),
           ),
         ],

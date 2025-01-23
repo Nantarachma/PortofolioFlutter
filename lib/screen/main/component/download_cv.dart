@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:portofolio_website/constaint.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DownloadCV extends StatelessWidget {
@@ -23,7 +21,7 @@ class DownloadCV extends StatelessWidget {
         child: Row(
           children: [
             Text(
-              "Link to CV",
+              "Curriculum Vitae",
               style: Theme.of(context).textTheme.bodyLarge!,
             ),
           ],

@@ -40,6 +40,9 @@ class CardWidget extends StatelessWidget {
             onPressed: () {
               launch(project.link!);
             },
+            style: TextButton.styleFrom(
+              backgroundColor: darkColor,
+            ),
             child: Text(
               "Check it out >>",
               style: TextStyle(color: primaryColor),

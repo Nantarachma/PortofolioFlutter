@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portofolio_website/constaint.dart';
 import 'package:portofolio_website/screen/main/component/my_info.dart';
 import 'package:portofolio_website/screen/main/component/side_menu.dart';
 
@@ -8,6 +9,7 @@ class DrawerWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: bgColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

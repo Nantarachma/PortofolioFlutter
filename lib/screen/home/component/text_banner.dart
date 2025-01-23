@@ -54,6 +54,7 @@ class AnimatedText extends StatelessWidget {
         children: [
           Text("I specialize in "),
           AnimatedTextKit(
+            repeatForever: true,
             animatedTexts: [
               TyperAnimatedText("Android Developer."),
               TyperAnimatedText("Flutter Developer."),

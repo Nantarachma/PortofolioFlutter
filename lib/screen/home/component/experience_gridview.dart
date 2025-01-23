@@ -7,7 +7,7 @@ class ExperienceGridView extends StatelessWidget {
   const ExperienceGridView({
     Key? key,
     this.crossAxisCount = 2,
-    this.childAspectRatio = 2,
+    this.childAspectRatio = 1,
   }) : super(key: key);
 
   final int crossAxisCount;
@@ -15,18 +15,21 @@ class ExperienceGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
-      itemCount: experiences.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: crossAxisCount,
-        crossAxisSpacing: defaultPadding,
-        mainAxisSpacing: defaultPadding,
-        childAspectRatio: childAspectRatio,
-      ),
-      itemBuilder: (context, index) => ExperienceCard(
-        experience: experiences[index],
+    return Container(
+      width: double.infinity,
+      child: GridView.builder(
+        shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
+        itemCount: experiences.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: crossAxisCount,
+          crossAxisSpacing: defaultPadding,
+          mainAxisSpacing: defaultPadding,
+          childAspectRatio: childAspectRatio,
+        ),
+        itemBuilder: (context, index) => ExperienceCard(
+          experience: experiences[index],
+        ),
       ),
     );
   }

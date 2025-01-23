@@ -1,22 +1,33 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class IconAbout extends StatelessWidget {
-  const IconAbout({
-    Key? key, required this.url, required this.asset,
-  }) : super(key: key);
+  final String asset;
+  final String url;
+  final Color color;
 
-  final String url, asset;
+  const IconAbout({
+    Key? key,
+    required this.asset,
+    required this.url,
+    this.color = Colors.white, // Default color
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      onPressed: () {
-        launch(url);
+      icon: SvgPicture.asset(
+        asset,
+        color: color, // Set the color here
+      ),
+      onPressed: () async {
+        if (await canLaunch(url)) {
+          await launch(url);
+        } else {
+          throw 'Could not launch $url';
+        }
       },
-      icon: SvgPicture.asset(asset),
     );
   }
 }

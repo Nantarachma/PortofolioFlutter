@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portofolio_website/constaint.dart';
 
 class MyInfo extends StatelessWidget {
   const MyInfo({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class MyInfo extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1.23,
       child: Container(
-        color: Color(0xFF242430),
+        color: secondaryColor,
         child: Column(
           children: [
             Spacer(flex: 2,),
@@ -19,15 +20,17 @@ class MyInfo extends StatelessWidget {
             Spacer(),
             Text(
               "Rachmananta Ibnu Fajar",
-              style: Theme.of(context).textTheme.titleMedium,
+              style: Theme.of(context).textTheme.titleLarge,
             ),
+            Spacer(),
             Text(
               "UPN Veteran Jawa Timur", textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.titleSmall,
+              style: Theme.of(context).textTheme.titleMedium,
             ),
+            Spacer(),
             Text(
               "Informatics", textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.w200, height: 1.5),
+              style: Theme.of(context).textTheme.titleSmall,
             ),
             Spacer(flex: 2,),
           ],

@@ -15,18 +15,23 @@ class ProjectGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
-      itemCount: demo_projects.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: crossAxisCount,
-          crossAxisSpacing: defaultPadding,
-          mainAxisSpacing: defaultPadding,
-          childAspectRatio: childAspectRatio),
-      itemBuilder: (context, index) => CardWidget(
-        project: demo_projects[index],
-      ),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return GridView.builder(
+          shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
+          itemCount: demo_projects.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: crossAxisCount,
+            crossAxisSpacing: defaultPadding,
+            mainAxisSpacing: defaultPadding,
+            childAspectRatio: childAspectRatio,
+          ),
+          itemBuilder: (context, index) => CardWidget(
+            project: demo_projects[index],
+          ),
+        );
+      },
     );
   }
 }

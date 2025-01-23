@@ -6,8 +6,8 @@ import 'package:portofolio_website/screen/home/component/certificate_card.dart';
 class CertificateGridView extends StatelessWidget {
   const CertificateGridView({
     Key? key,
-    this.crossAxisCount = 3,
-    this.childAspectRatio = 1.5,
+    this.crossAxisCount = 2,
+    this.childAspectRatio = 3,
   }) : super(key: key);
 
   final int crossAxisCount;
@@ -20,11 +20,10 @@ class CertificateGridView extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       itemCount: certificates.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: crossAxisCount,
-        crossAxisSpacing: defaultPadding,
-        mainAxisSpacing: defaultPadding,
-        childAspectRatio: childAspectRatio,
-      ),
+          crossAxisCount: crossAxisCount,
+          crossAxisSpacing: defaultPadding,
+          mainAxisSpacing: defaultPadding,
+          childAspectRatio: childAspectRatio),
       itemBuilder: (context, index) => CertificateCard(
         certificate: certificates[index],
       ),

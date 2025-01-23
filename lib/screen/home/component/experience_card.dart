@@ -56,6 +56,9 @@ class ExperienceCard extends StatelessWidget {
                   throw 'Could not launch $url';
                 }
               },
+              style: TextButton.styleFrom(
+                backgroundColor: darkColor,
+              ),
               child: Text(
                 "View Credential >>",
                 style: TextStyle(color: primaryColor),
