@@ -17,15 +17,15 @@ class TextBanner extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Discover my Amazing \nProject!",
+            "This is my \nPortofolio!",
             style: Responsive.isDesktop(context)
                 ? Theme.of(context)
                     .textTheme
-                    .headline3!
+                    .displaySmall!
                     .copyWith(fontWeight: FontWeight.bold, color: Colors.white)
                 : Theme.of(context)
                     .textTheme
-                    .headline5!
+                    .headlineSmall!
                     .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
           ),
           if (!Responsive.isMobileLarge(context))
@@ -49,20 +49,16 @@ class AnimatedText extends StatelessWidget {
     return DefaultTextStyle(
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
-      style: Theme.of(context).textTheme.subtitle1!,
+      style: Theme.of(context).textTheme.titleMedium!,
       child: Row(
         children: [
-          Text("I build "),
+          Text("I specialize in "),
           AnimatedTextKit(
             animatedTexts: [
-              TyperAnimatedText("flutter portofolio website."),
-              TyperAnimatedText("e-commerce with firebase."),
-              TyperAnimatedText("social media integeration."),
-              TyperAnimatedText("covid tracker integeration."),
-              TyperAnimatedText("flutter news app."),
-              TyperAnimatedText("hero quiz app."),
-              TyperAnimatedText("translator apps."),
-              TyperAnimatedText("to-do list apps."),
+              TyperAnimatedText("Android Developer."),
+              TyperAnimatedText("Flutter Developer."),
+              TyperAnimatedText("Back-End Developer."),
+              TyperAnimatedText("Machine Learning."),
             ],
           ),
         ],

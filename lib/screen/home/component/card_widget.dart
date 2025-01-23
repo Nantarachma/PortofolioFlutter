@@ -23,7 +23,7 @@ class CardWidget extends StatelessWidget {
             project.title!,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
           Spacer(),
           Text(
@@ -38,7 +38,7 @@ class CardWidget extends StatelessWidget {
               launch(project.link!);
             },
             child: Text(
-              "Read More >>",
+              "Check it out >>",
               style: TextStyle(color: primaryColor),
             ),
           )

@@ -20,7 +20,7 @@ class SkillSet extends StatelessWidget {
         SizedBox(height: defaultPadding / 2),
         Text(
           text,
-          style: Theme.of(context).textTheme.subtitle2,
+          style: Theme.of(context).textTheme.titleSmall,
         ),
       ],
     );

@@ -18,11 +18,11 @@ class MyInfo extends StatelessWidget {
             ),
             Spacer(),
             Text(
-              "Achmad Rizki Nur Fauzie",
-              style: Theme.of(context).textTheme.subtitle1,
+              "Rachmananta Ibnu Fajar",
+              style: Theme.of(context).textTheme.titleMedium,
             ),
             Text(
-              "Mobile Developer", textAlign: TextAlign.center,
+              "Informatics", textAlign: TextAlign.center,
               style: TextStyle(fontWeight: FontWeight.w200, height: 1.5),
             ),
             Spacer(flex: 2,),

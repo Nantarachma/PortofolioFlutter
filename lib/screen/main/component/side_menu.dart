@@ -18,7 +18,7 @@ class SideMenu extends StatelessWidget {
         children: [
           Text(
             "Skills",
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
           SizedBox(
             height: defaultPadding,

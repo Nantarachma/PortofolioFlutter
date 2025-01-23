@@ -15,10 +15,11 @@ class MyProject extends StatelessWidget {
       children: [
         Text(
           "My Projects",
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
         Text(
-          "Click Read More if you want see a source code or more details",
+          "Click Read More if you want see more details",
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
         SizedBox(
           height: defaultPadding,
