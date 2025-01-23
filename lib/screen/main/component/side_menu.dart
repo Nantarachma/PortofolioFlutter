@@ -17,7 +17,6 @@ class SideMenu extends StatelessWidget {
         padding: const EdgeInsets.all(defaultPadding),
         child: Column(
           children: [
-            const SizedBox(height: defaultPadding * 2),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
