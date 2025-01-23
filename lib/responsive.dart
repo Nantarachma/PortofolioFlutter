@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-// We will modify it once we have our final design
+import 'package:portofolio_website/constaint.dart';
 
 class Responsive extends StatelessWidget {
   final Widget mobile;
@@ -11,34 +10,60 @@ class Responsive extends StatelessWidget {
   const Responsive({
     Key? key,
     required this.mobile,
+    this.mobileLarge,
     this.tablet,
     required this.desktop,
-    this.mobileLarge,
   }) : super(key: key);
 
+  // Getter methods for screen sizes
   static bool isMobile(BuildContext context) =>
-      MediaQuery.of(context).size.width <= 450;
+      MediaQuery.of(context).size.width <= kMobileBreakpoint;
 
   static bool isMobileLarge(BuildContext context) =>
-      MediaQuery.of(context).size.width <= 730;
+      MediaQuery.of(context).size.width <= kMobileLargeBreakpoint;
 
   static bool isTablet(BuildContext context) =>
-      MediaQuery.of(context).size.width < 1024;
+      MediaQuery.of(context).size.width <= kTabletBreakpoint;
 
   static bool isDesktop(BuildContext context) =>
-      MediaQuery.of(context).size.width >= 1065;
+      MediaQuery.of(context).size.width > kTabletBreakpoint;
+
+  // Helper methods for responsive values
+  static double getPadding(BuildContext context) {
+    if (isMobile(context)) return kMobilePadding;
+    if (isTablet(context)) return kTabletPadding;
+    return kDesktopPadding;
+  }
+
+  static double getHeadingSize(BuildContext context) {
+    if (isMobile(context)) return kMobileHeadingSize;
+    if (isTablet(context)) return kTabletHeadingSize;
+    return kDesktopHeadingSize;
+  }
+
+  static double getBodySize(BuildContext context) {
+    if (isMobile(context)) return kMobileBodySize;
+    if (isTablet(context)) return kTabletBodySize;
+    return kDesktopBodySize;
+  }
 
   @override
   Widget build(BuildContext context) {
-    final Size _size = MediaQuery.of(context).size;
-    if (_size.width >= 1065) {
+    final Size size = MediaQuery.of(context).size;
+
+    // Desktop layout
+    if (size.width > kTabletBreakpoint) {
       return desktop;
-    } else if (_size.width > 730 && tablet != null) {
-      return tablet!;
-    } else if (_size.width >= 570 && mobileLarge != null) {
-      return mobileLarge!;
-    } else {
-      return mobile;
     }
+    // Tablet layout
+    if (size.width > kMobileLargeBreakpoint && tablet != null) {
+      return tablet!;
+    }
+    // Large mobile layout
+    if (size.width > kMobileBreakpoint && mobileLarge != null) {
+      return mobileLarge!;
+    }
+    // Mobile layout
+    return mobile;
   }
 }

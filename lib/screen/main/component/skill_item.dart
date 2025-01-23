@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portofolio_website/constaint.dart';
-import 'package:portofolio_website/responsive.dart';
 import 'package:portofolio_website/screen/main/component/skill_section.dart';
 import 'package:portofolio_website/screen/main/component/social_media.dart';
 
+import '../../../constaint.dart';
 import 'download_cv.dart';
 import 'my_info.dart';
 

@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portofolio_website/constaint.dart';
 import 'package:portofolio_website/screen/home/home_screen.dart';
+import 'package:portofolio_website/responsive.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Rachmananta Portofolio',
-      // we are using dark theme and we modify it as our need
       theme: ThemeData.dark().copyWith(
         primaryColor: primaryColor,
         scaffoldBackgroundColor: bgColor,
@@ -22,11 +23,37 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: Colors.white)
             .copyWith(
-              bodyLarge: TextStyle(color: bodyTextColor),
-              bodyMedium: TextStyle(color: bodyTextColor),
-            ),
+          // Responsive text styles
+          displayLarge: TextStyle(
+            color: bodyTextColor,
+            fontSize: kDesktopHeadingSize,
+            fontWeight: FontWeight.bold,
+          ),
+          displayMedium: TextStyle(
+            color: bodyTextColor,
+            fontSize: kTabletHeadingSize,
+            fontWeight: FontWeight.bold,
+          ),
+          displaySmall: TextStyle(
+            color: bodyTextColor,
+            fontSize: kMobileHeadingSize,
+            fontWeight: FontWeight.bold,
+          ),
+          bodyLarge: TextStyle(
+            color: bodyTextColor,
+            fontSize: kDesktopBodySize,
+          ),
+          bodyMedium: TextStyle(
+            color: bodyTextColor,
+            fontSize: kTabletBodySize,
+          ),
+          bodySmall: TextStyle(
+            color: bodyTextColor,
+            fontSize: kMobileBodySize,
+          ),
+        ),
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
