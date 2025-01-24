@@ -10,37 +10,83 @@ class HomeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       width: double.infinity,
+      constraints: const BoxConstraints(
+        maxHeight: 700,
+        minHeight: 350, // Minimum height for smaller screens
+      ),
       child: AspectRatio(
-        aspectRatio: Responsive.isMobile(context) ? 2 : 3,
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(16.0),
-          child: Stack(
-            fit: StackFit.expand,
-            children: [
-              Image.asset(
+        aspectRatio: Responsive.isMobile(context)
+            ? 1.5  // More vertical space on mobile
+            : Responsive.isTablet(context)
+            ? 2.2  // Balanced for tablet
+            : 3.0, // Original desktop ratio
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            // Background Image with ClipRRect
+            ClipRRect(
+              borderRadius: BorderRadius.circular(16.0),
+              child: Image.asset(
                 "assets/images/bg.jpeg",
                 fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  return Container(
+                    color: darkColor,
+                    child: const Center(
+                      child: Icon(
+                        Icons.image_not_supported,
+                        color: Colors.white24,
+                        size: 62,
+                      ),
+                    ),
+                  );
+                },
               ),
-              Container(
+            ),
+
+            // Gradient Overlay
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16.0),
+                gradient: LinearGradient(
+                  colors: [
+                    darkColor.withOpacity(0.85), // Stronger opacity at top
+                    darkColor.withOpacity(0.2),  // Lighter at bottom
+                  ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  stops: const [0.3, 1.0], // Gradient distribution
+                ),
+              ),
+            ),
+
+            // Content
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: Responsive.isMobile(context)
+                    ? defaultPadding
+                    : defaultPadding * 2,
+                vertical: defaultPadding,
+              ),
+              child: const TextBanner(),
+            ),
+
+            // Optional: Subtle pattern overlay for texture
+            Opacity(
+              opacity: 0.1,
+              child: Container(
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      darkColor.withOpacity(0.7),
-                      darkColor.withOpacity(0.3),
-                    ],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
+                  borderRadius: BorderRadius.circular(16.0),
+                  image: const DecorationImage(
+                    image: AssetImage("assets/images/pattern.png"),
+                    repeat: ImageRepeat.repeat,
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(defaultPadding),
-                child: TextBanner(),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -41,6 +41,12 @@ class SocialMedia extends StatelessWidget {
                 url: 'https://github.com/NantaRachma',
                 tooltip: 'GitHub Profile',
               ),
+              const SizedBox(width: defaultPadding),
+              SocialIcon(
+                asset: 'assets/icons/instagram.svg', // Pastikan file icon ada
+                url: 'https://www.instagram.com/nantarach_/', // Sesuaikan dengan username Instagram Anda
+                tooltip: 'Instagram Profile',
+              ),
             ],
           ),
         ),
@@ -105,6 +111,12 @@ class _SocialIconState extends State<SocialIcon> {
               widget.asset,
               height: 24,
               width: 24,
+              // Menggunakan colorFilter yang benar
+              colorFilter: ColorFilter.mode(
+                isHovered ? primaryColor : bodyTextColor,
+                BlendMode.srcIn,
+              ),
+              // Menambahkan color property sebagai fallback
               color: isHovered ? primaryColor : bodyTextColor,
             ),
           ),

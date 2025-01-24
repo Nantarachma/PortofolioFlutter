@@ -17,22 +17,23 @@ class TextBanner extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Welcome to my \nWebsite Portofolio!",
+            "Welcome to my\nPortfolio Website!",  // Fixed typo in "Portfolio"
             style: Responsive.isDesktop(context)
-                ? Theme.of(context)
-                    .textTheme
-                    .displaySmall!
-                    .copyWith(fontWeight: FontWeight.bold, color: Colors.white)
-                : Theme.of(context)
-                    .textTheme
-                    .headlineSmall!
-                    .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
-          ),
-          if (!Responsive.isMobileLarge(context))
-            SizedBox(
-              height: defaultPadding /2,
+                ? Theme.of(context).textTheme.displaySmall!.copyWith(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              height: 1.2,  // Added line height for better readability
+            )
+                : Theme.of(context).textTheme.headlineSmall!.copyWith(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              height: 1.2,  // Consistent line height
             ),
-          Responsive.isMobile(context) ? Expanded(child: AnimatedText()) : AnimatedText()
+          ),
+          const SizedBox(height: defaultPadding),  // Consistent spacing
+          Responsive.isMobile(context)
+              ? const Expanded(child: AnimatedText())
+              : const AnimatedText(),
         ],
       ),
     );
@@ -49,17 +50,31 @@ class AnimatedText extends StatelessWidget {
     return DefaultTextStyle(
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
-      style: Theme.of(context).textTheme.titleMedium!,
+      style: Theme.of(context).textTheme.titleMedium!.copyWith(
+        color: Colors.white70,  // Added color for better visibility
+      ),
       child: Row(
         children: [
-          Text("I specialize in "),
+          const Text("I specialize in "),
           AnimatedTextKit(
             repeatForever: true,
             animatedTexts: [
-              TyperAnimatedText("Android Developer."),
-              TyperAnimatedText("Flutter Developer."),
-              TyperAnimatedText("Back-End Developer."),
-              TyperAnimatedText("Machine Learning."),
+              TyperAnimatedText(
+                "Android Development",
+                speed: const Duration(milliseconds: 60),
+              ),
+              TyperAnimatedText(
+                "Flutter Development",
+                speed: const Duration(milliseconds: 60),
+              ),
+              TyperAnimatedText(
+                "Back-End Development",
+                speed: const Duration(milliseconds: 60),
+              ),
+              TyperAnimatedText(
+                "Machine Learning",
+                speed: const Duration(milliseconds: 60),
+              ),
             ],
           ),
         ],

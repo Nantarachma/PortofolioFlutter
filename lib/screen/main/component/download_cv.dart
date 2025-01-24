@@ -24,7 +24,7 @@ class DownloadCV extends StatelessWidget {
     return Column(
       children: [
         Text(
-          "Download My CV",
+          "Check Out My CV",
           style: Theme.of(context).textTheme.titleMedium?.copyWith(
             color: primaryColor,
             fontWeight: FontWeight.w600,
@@ -51,7 +51,7 @@ class DownloadCV extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(
-                    Icons.download_rounded,
+                    Icons.arrow_right_alt_rounded,
                     color: primaryColor,
                     size: 20,
                   ),

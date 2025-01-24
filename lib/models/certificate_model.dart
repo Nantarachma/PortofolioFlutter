@@ -100,13 +100,13 @@ final List<Certificate> certificates = [
   ),
   Certificate(
     title: 'Belajar Dasar Pemrograman JavaScript',
-    issuer: 'Dicoding',
+    issuer: 'Dicoding/AWS',
     date: 'Jan 2025 - Jan 2028',
     credentialUrl: 'https://www.dicoding.com/certificates/4EXGV5NK1XRL',
   ),
   Certificate(
     title: 'Belajar Back-End Pemula dengan JavaScript',
-    issuer: 'Dicoding',
+    issuer: 'Dicoding/AWS',
     date: 'Jan 2025 - Jan 2028',
     credentialUrl: 'https://www.dicoding.com/certificates/QLZ93KQ59Z5D',
   ),
