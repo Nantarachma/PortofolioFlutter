@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portofolio_website/constaint.dart';
-import 'package:portofolio_website/responsive.dart';
-import 'package:portofolio_website/screen/home/component/project_gridview.dart';
-import '../../../global_keys.dart';
-import 'experience_gridview.dart';
-import 'certificate_gridview.dart';
+import 'package:portofolio_website/constant/constant.dart';
+import '../../../utils/global_keys.dart';
+import '../../../utils/responsive.dart';
+import 'certificate/certificate_gridview.dart';
+import 'experience/experience_gridview.dart';
+import 'project/project_gridview.dart';
 
 class ContentPage extends StatelessWidget {
   const ContentPage({

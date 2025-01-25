@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portofolio_website/constaint.dart';
+import 'package:portofolio_website/constant/constant.dart';
 import 'package:portofolio_website/models/experience_model.dart';
-import 'package:portofolio_website/screen/home/component/experience_card.dart';
+import 'package:portofolio_website/screen/home/component/experience/experience_card.dart';
 
 class ExperienceGridView extends StatelessWidget {
   const ExperienceGridView({

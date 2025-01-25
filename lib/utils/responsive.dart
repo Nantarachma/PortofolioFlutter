@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portofolio_website/constaint.dart';
+import 'package:portofolio_website/constant/constant.dart';
 
 class Responsive extends StatelessWidget {
   final Widget mobile;

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portofolio_website/constaint.dart';
-import 'package:portofolio_website/responsive.dart';
-import 'package:portofolio_website/screen/main/component/my_info.dart';
-import 'package:portofolio_website/screen/main/component/side_menu.dart';
+import 'package:portofolio_website/constant/constant.dart';
+
+import '../../../utils/responsive.dart';
+import 'content/my_info.dart';
+import 'content/skill_set.dart';
 
 
 class DrawerWeb extends StatelessWidget {

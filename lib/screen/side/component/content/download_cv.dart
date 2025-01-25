@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portofolio_website/constaint.dart';
-import 'package:portofolio_website/responsive.dart';
+import 'package:portofolio_website/constant/constant.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../../../utils/responsive.dart';
 
 class DownloadCV extends StatelessWidget {
   const DownloadCV({Key? key}) : super(key: key);

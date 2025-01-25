@@ -1,40 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portofolio_website/constaint.dart';
+import 'package:portofolio_website/constant/constant.dart';
 import 'package:portofolio_website/models/certificate_model.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-
-class CertificateGridView extends StatelessWidget {
-  final int crossAxisCount;
-  final double childAspectRatio;
-
-  const CertificateGridView({
-    Key? key,
-    this.crossAxisCount = 3,
-    this.childAspectRatio = 1.1,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      constraints: const BoxConstraints(maxWidth: 1200),
-      child: GridView.builder(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        itemCount: certificates.length,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: crossAxisCount,
-          childAspectRatio: childAspectRatio,
-          crossAxisSpacing: defaultPadding,
-          mainAxisSpacing: defaultPadding,
-        ),
-        itemBuilder: (context, index) => CertificateCard(
-          certificate: certificates[index],
-          index: index,
-        ),
-      ),
-    );
-  }
-}
 
 class CertificateCard extends StatefulWidget {
   final Certificate certificate;
@@ -128,7 +95,7 @@ class _CertificateCardState extends State<CertificateCard> {
       'python',
       'c++',
       'c#',
-      'pemrograman dasar', // Mengubah dari 'pemrograman' ke lebih spesifik
+      'pemrograman dasar',
       'algoritma',
       'data structure',
       'logika',
@@ -349,7 +316,6 @@ class _CertificateCardState extends State<CertificateCard> {
                       'View Certificate',
                       style: TextStyle(
                         color: issuerColor,
-                        fontWeight: FontWeight.w500,
                       ),
                     ),
                   ],

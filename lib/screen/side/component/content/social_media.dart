@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:portofolio_website/constaint.dart';
-import 'package:portofolio_website/responsive.dart';
+import 'package:portofolio_website/constant/constant.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../../../utils/responsive.dart';
 
 class SocialMedia extends StatelessWidget {
   const SocialMedia({Key? key}) : super(key: key);

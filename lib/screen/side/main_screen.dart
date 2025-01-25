@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portofolio_website/constaint.dart';
-import 'package:portofolio_website/responsive.dart';
-import 'package:portofolio_website/screen/main/component/drawerWeb.dart';
+import 'package:portofolio_website/constant/constant.dart';
 
-import '../../custom_app_bar.dart';
+import '../../utils/custom_app_bar.dart';
+import '../../utils/responsive.dart';
+import 'component/drawer_web.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({Key? key, required this.children}) : super(key: key);

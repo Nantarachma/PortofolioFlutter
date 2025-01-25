@@ -1,6 +1,6 @@
-// lib/screen/main/component/side_menu.dart
+// lib/screen/side/component/skill_set.dart
 import 'package:flutter/material.dart';
-import 'package:portofolio_website/constaint.dart';
+import 'package:portofolio_website/constant/constant.dart';
 import 'download_cv.dart';
 import 'social_media.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portofolio_website/constaint.dart';
-import 'package:portofolio_website/models/project.dart';
+import 'package:portofolio_website/constant/constant.dart';
+import 'package:portofolio_website/models/project_model.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class ProjectCard extends StatefulWidget {

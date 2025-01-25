@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portofolio_website/constaint.dart';
-import 'package:portofolio_website/responsive.dart';
-import 'package:portofolio_website/screen/home/component/text_banner.dart';
+import 'package:portofolio_website/constant/constant.dart';
+
+import '../../../../utils/responsive.dart';
+import 'text_banner.dart';
 
 class HomeBanner extends StatelessWidget {
   const HomeBanner({
@@ -71,20 +72,6 @@ class HomeBanner extends StatelessWidget {
                 vertical: defaultPadding,
               ),
               child: const TextBanner(),
-            ),
-
-            // Optional: Subtle pattern overlay for texture
-            Opacity(
-              opacity: 0.1,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16.0),
-                  image: const DecorationImage(
-                    image: AssetImage("assets/images/pattern.png"),
-                    repeat: ImageRepeat.repeat,
-                  ),
-                ),
-              ),
             ),
           ],
         ),

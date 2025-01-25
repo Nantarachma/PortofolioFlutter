@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portofolio_website/constaint.dart';
+import 'package:portofolio_website/constant/constant.dart';
 import 'package:portofolio_website/screen/home/home_screen.dart';
 
 void main() {

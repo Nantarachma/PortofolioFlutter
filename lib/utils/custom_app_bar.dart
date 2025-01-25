@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portofolio_website/constaint.dart';
-import 'package:portofolio_website/global_keys.dart';
-import 'package:portofolio_website/responsive.dart';
+import 'package:portofolio_website/constant/constant.dart';
+import 'package:portofolio_website/utils/global_keys.dart';
+
+import 'responsive.dart';
 
 // NavigationButton class harus didefinisikan terlebih dahulu
 class NavigationButton extends StatefulWidget {
