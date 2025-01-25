@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portofolio_website/constaint.dart';
 import 'package:portofolio_website/responsive.dart';
 import 'package:portofolio_website/screen/home/component/project_gridview.dart';
+import '../../../global_keys.dart';
 import 'experience_gridview.dart';
 import 'certificate_gridview.dart';
 
@@ -13,25 +14,58 @@ class ContentPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: const BoxConstraints(maxWidth: 1200), // Maximum width constraint
-      child: Padding(
-        padding: const EdgeInsets.all(defaultPadding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: defaultPadding),
-            _buildSectionTitle(context, "Experience"),
-            const SizedBox(height: defaultPadding),
-            _buildExperienceSection(context),
-            const SizedBox(height: defaultPadding * 2),
-            _buildSectionTitle(context, "My Projects"),
-            const SizedBox(height: defaultPadding),
-            _buildProjectSection(context),
-            const SizedBox(height: defaultPadding * 2),
-            _buildSectionTitle(context, "Certificates"),
-            const SizedBox(height: defaultPadding),
-            _buildCertificateSection(context),
-          ],
+      constraints: const BoxConstraints(maxWidth: 1200),
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(defaultPadding),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Experience Section
+              Container(
+                key: AppKeys.keys['experience'], // Menggunakan AppKeys.keys
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _buildSectionTitle(context, "Experience"),
+                    const SizedBox(height: defaultPadding),
+                    _buildExperienceSection(context),
+                  ],
+                ),
+              ),
+              const SizedBox(height: defaultPadding * 2),
+
+              // Projects Section
+              Container(
+                key: AppKeys.keys['projects'], // Menggunakan AppKeys.keys
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _buildSectionTitle(context, "My Projects"),
+                    const SizedBox(height: defaultPadding),
+                    _buildProjectSection(context),
+                  ],
+                ),
+              ),
+              const SizedBox(height: defaultPadding * 2),
+
+              // Certificates Section
+              Container(
+                key: AppKeys.keys['certificates'], // Menggunakan AppKeys.keys
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _buildSectionTitle(context, "Certificates"),
+                    const SizedBox(height: defaultPadding),
+                    _buildCertificateSection(context),
+                  ],
+                ),
+              ),
+
+              // Footer spacing
+              const SizedBox(height: defaultPadding * 3),
+            ],
+          ),
         ),
       ),
     );
@@ -47,44 +81,44 @@ class ContentPage extends StatelessWidget {
     );
   }
 
-  Widget _buildProjectSection(BuildContext context) {
-    return Responsive(
-      mobile: ProjectGridView(
-        crossAxisCount: 1,
-        childAspectRatio: 1.3,        // Adjusted from 1.5
-      ),
-      mobileLarge: ProjectGridView(
-        crossAxisCount: 2,
-        childAspectRatio: 1.6,        // Adjusted from 1.8
-      ),
-      tablet: ProjectGridView(
-        crossAxisCount: 2,
-        childAspectRatio: 1.7,        // Adjusted from 1.8
-      ),
-      desktop: ProjectGridView(
-        crossAxisCount: 2,
-        childAspectRatio: 1.9,        // Adjusted from 2.0
-      ),
-    );
-  }
-
   Widget _buildExperienceSection(BuildContext context) {
     return Responsive(
       mobile: ExperienceGridView(
         crossAxisCount: 1,
-        childAspectRatio: 1.5,        // Adjusted from 1.7
+        childAspectRatio: 1.1,
       ),
       mobileLarge: ExperienceGridView(
-        crossAxisCount: 2,
-        childAspectRatio: 1.4,        // Adjusted from 1.5
+        crossAxisCount: 1,
+        childAspectRatio: 1.1,
       ),
       tablet: ExperienceGridView(
         crossAxisCount: 2,
-        childAspectRatio: 1.6,        // Adjusted from 1.7
+        childAspectRatio: 1.2,
       ),
       desktop: ExperienceGridView(
         crossAxisCount: 2,
-        childAspectRatio: 1.7,        // Adjusted from 1.8
+        childAspectRatio: 1.5,
+      ),
+    );
+  }
+
+  Widget _buildProjectSection(BuildContext context) {
+    return Responsive(
+      mobile: ProjectGridView(
+        crossAxisCount: 1,
+        childAspectRatio: 1.1,
+      ),
+      mobileLarge: ProjectGridView(
+        crossAxisCount: 1,
+        childAspectRatio: 1.1,
+      ),
+      tablet: ProjectGridView(
+        crossAxisCount: 2,
+        childAspectRatio: 1.3,
+      ),
+      desktop: ProjectGridView(
+        crossAxisCount: 2,
+        childAspectRatio: 1.9,
       ),
     );
   }
@@ -93,19 +127,19 @@ class ContentPage extends StatelessWidget {
     return Responsive(
       mobile: CertificateGridView(
         crossAxisCount: 1,
-        childAspectRatio: 1.3,        // Adjusted from 1.5
+        childAspectRatio: 1.3,
       ),
       mobileLarge: CertificateGridView(
-        crossAxisCount: 2,
-        childAspectRatio: 1.5,        // Adjusted from 1.7
+        crossAxisCount: 1,
+        childAspectRatio: 1.3,
       ),
       tablet: CertificateGridView(
         crossAxisCount: 2,
-        childAspectRatio: 1.6,        // Adjusted from 1.7
+        childAspectRatio: 1.1,
       ),
       desktop: CertificateGridView(
-        crossAxisCount: 2,
-        childAspectRatio: 1.8,        // Adjusted from 2.0
+        crossAxisCount: 3,
+        childAspectRatio: 1.1,
       ),
     );
   }

@@ -8,7 +8,7 @@ class MyInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: const BoxConstraints(maxWidth: 400),
+      constraints: const BoxConstraints(maxWidth: 350),
       width: double.infinity,
       padding: EdgeInsets.symmetric(
         horizontal: Responsive.isMobile(context)
@@ -23,7 +23,6 @@ class MyInfo extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            padding: const EdgeInsets.all(3),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(color: primaryColor, width: 2),

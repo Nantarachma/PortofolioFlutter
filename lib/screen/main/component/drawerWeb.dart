@@ -4,6 +4,7 @@ import 'package:portofolio_website/responsive.dart';
 import 'package:portofolio_website/screen/main/component/my_info.dart';
 import 'package:portofolio_website/screen/main/component/side_menu.dart';
 
+
 class DrawerWeb extends StatelessWidget {
   const DrawerWeb({Key? key}) : super(key: key);
 
@@ -33,16 +34,14 @@ class DrawerWeb extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: defaultPadding),
-              const MyInfo(),
+              const MyInfo(), // Personal info
               const Divider(
                 color: secondaryColor,
                 thickness: 0.5,
                 height: defaultPadding * 2,
               ),
-              Expanded(
-                child: const SideMenu(),
-              ),
-              const SizedBox(height: defaultPadding),
+              // Menggunakan SideMenu yang sudah ada
+              const SideMenu(),
             ],
           ),
         ),

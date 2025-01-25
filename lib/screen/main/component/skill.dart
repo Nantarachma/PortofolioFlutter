@@ -117,31 +117,3 @@ class _SkillState extends State<Skill> with SingleTickerProviderStateMixin {
     );
   }
 }
-
-// Contoh penggunaan:
-class SkillExample extends StatelessWidget {
-  const SkillExample({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        Skill(
-          name: "Flutter",
-          percentage: 0.85,
-          icon: Icons.flutter_dash,
-        ),
-        Skill(
-          name: "Dart",
-          percentage: 0.80,
-          icon: Icons.code,
-        ),
-        Skill(
-          name: "Firebase",
-          percentage: 0.75,
-          icon: Icons.fireplace,
-        ),
-      ],
-    );
-  }
-}

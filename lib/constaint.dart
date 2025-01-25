@@ -12,22 +12,22 @@ const defaultPadding = 20.0;
 const defaultDuration = Duration(seconds: 1); // we use it on our animation
 
 // Screen sizes
-const double kMobileBreakpoint = 480.0;
-const double kMobileLargeBreakpoint = 900.0;  // Increased from 768.0
-const double kTabletBreakpoint = 1200.0;      // Increased from 1024.0
-const double kDesktopBreakpoint = 1440.0;
-const maxWidth = 1920.0;
+const double kMobileBreakpoint = 480.0;      // For small mobile devices
+const double kMobileLargeBreakpoint = 768.0; // For larger mobile devices/small tablets
+const double kTabletBreakpoint = 1024.0;     // For tablets
+const double kDesktopBreakpoint = 1440.0;    // For desktop screens
+const maxWidth = 1920.0;                     // max width of our web
 
-// Adjust paddings for taller screens
-const double kMobilePadding = 20.0;           // Increased from 16.0
-const double kTabletPadding = 28.0;           // Increased from 24.0
-const double kDesktopPadding = 36.0;          // Increased from 32.0
+// Responsive paddings
+const double kMobilePadding = 16.0;
+const double kTabletPadding = 24.0;
+const double kDesktopPadding = 32.0;
 
-// Adjust font sizes for better readability on tall screens
-const double kMobileHeadingSize = 28.0;       // Increased from 24.0
-const double kTabletHeadingSize = 32.0;       // Increased from 28.0
-const double kDesktopHeadingSize = 36.0;      // Increased from 32.0
+// Font sizes
+const double kMobileHeadingSize = 24.0;
+const double kTabletHeadingSize = 28.0;
+const double kDesktopHeadingSize = 32.0;
 
-const double kMobileBodySize = 16.0;          // Increased from 14.0
-const double kTabletBodySize = 18.0;          // Increased from 16.0
-const double kDesktopBodySize = 20.0;         // Increased from 18.0
+const double kMobileBodySize = 14.0;
+const double kTabletBodySize = 16.0;
+const double kDesktopBodySize = 18.0;

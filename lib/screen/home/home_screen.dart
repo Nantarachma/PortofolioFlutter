@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio_website/constaint.dart';
 import 'package:portofolio_website/responsive.dart';
-import 'package:portofolio_website/screen/home/component/home_banner.dart';
 import 'package:portofolio_website/screen/home/component/content_page.dart';
+import 'package:portofolio_website/screen/home/component/home_banner.dart';
 import 'package:portofolio_website/screen/main/main_screen.dart';
 
 class HomeScreen extends StatelessWidget {

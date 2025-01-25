@@ -7,7 +7,7 @@ class ExperienceGridView extends StatelessWidget {
   const ExperienceGridView({
     Key? key,
     this.crossAxisCount = 2,
-    this.childAspectRatio = 0.8, // Disesuaikan untuk konten yang lebih tinggi
+    this.childAspectRatio = 1.5, // Disesuaikan untuk konten yang lebih tinggi
   }) : super(key: key);
 
   final int crossAxisCount;

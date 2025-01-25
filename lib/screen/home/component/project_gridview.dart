@@ -7,7 +7,7 @@ class ProjectGridView extends StatelessWidget {
   const ProjectGridView({
     Key? key,
     this.crossAxisCount = 2,
-    this.childAspectRatio = 2, // Mengubah dari 3 menjadi 0.7 untuk card yang lebih tinggi
+    this.childAspectRatio = 2,
   }) : super(key: key);
 
   final int crossAxisCount;
@@ -16,7 +16,6 @@ class ProjectGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: const BoxConstraints(maxWidth: 1200), // Menambahkan maxWidth constraint
       child: LayoutBuilder(
         builder: (context, constraints) {
           return GridView.builder(

@@ -4,6 +4,7 @@ class Experience {
   final String duration;
   final String? credentialUrl;
   final String description;
+  final String? image; // Tambahkan field image
 
   Experience({
     required this.company,
@@ -11,6 +12,7 @@ class Experience {
     required this.duration,
     this.credentialUrl,
     required this.description,
+    this.image, // Tambahkan parameter image
   });
 }
 
@@ -21,6 +23,7 @@ final List<Experience> experiences = [
     duration: 'Maret 2024 - Januari 2025',
     credentialUrl: 'https://drive.google.com/file/d/1WvZGSMrXK3knp1Y0H8eC58z4d9BiFijx/view?usp=sharing',
     description: 'Led the regeneration department and organized various events.',
+    image: 'assets/images/bemfasilkom.png', // Tambahkan path image
   ),
   Experience(
     company: 'Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka',
@@ -28,5 +31,6 @@ final List<Experience> experiences = [
     duration: 'September 2024 - Januari 2025',
     credentialUrl: 'https://drive.google.com/open?id=1btniyPim_E_Dw_-Jv4m5Ii9_7ppgEAcL',
     description: 'Participated as a mobile development cohort, learning and develop a capstone project.',
+    image: 'assets/images/bangkit.png', // Tambahkan path image
   ),
 ];

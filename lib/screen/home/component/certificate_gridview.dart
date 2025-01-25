@@ -1,50 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio_website/constaint.dart';
 import 'package:portofolio_website/models/certificate_model.dart';
-import 'package:portofolio_website/responsive.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-
-class CertificatesSection extends StatelessWidget {
-  const CertificatesSection({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-          child: Text(
-            "Certificates & Achievements",
-            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-        const SizedBox(height: defaultPadding),
-        const Responsive(
-          mobile: CertificateGridView(
-            crossAxisCount: 1,
-            childAspectRatio: 1.5,
-          ),
-          mobileLarge: CertificateGridView(
-            crossAxisCount: 2,
-            childAspectRatio: 1.7,
-          ),
-          tablet: CertificateGridView(
-            crossAxisCount: 2,
-            childAspectRatio: 1.7,
-          ),
-          desktop: CertificateGridView(
-            crossAxisCount: 2,
-            childAspectRatio: 2,
-          ),
-        ),
-      ],
-    );
-  }
-}
 
 class CertificateGridView extends StatelessWidget {
   final int crossAxisCount;
@@ -52,7 +9,7 @@ class CertificateGridView extends StatelessWidget {
 
   const CertificateGridView({
     Key? key,
-    this.crossAxisCount = 2,
+    this.crossAxisCount = 3,
     this.childAspectRatio = 1.1,
   }) : super(key: key);
 

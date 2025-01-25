@@ -50,11 +50,6 @@ class DownloadCV extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(
-                    Icons.arrow_right_alt_rounded,
-                    color: primaryColor,
-                    size: 20,
-                  ),
                   const SizedBox(width: defaultPadding / 2),
                   Text(
                     "Curriculum Vitae",

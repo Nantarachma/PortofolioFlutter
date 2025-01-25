@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:portofolio_website/constaint.dart';
 import 'download_cv.dart';
 import 'social_media.dart';
-import 'my_info.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
@@ -32,10 +31,10 @@ class SideMenu extends StatelessWidget {
                 SkillCategory(
                   title: "Technical Skills",
                   skills: [
-                    Skill(name: "Flutter", percentage: 0.85),
-                    Skill(name: "Kotlin", percentage: 0.80),
+                    Skill(name: "Flutter", percentage: 0.80),
+                    Skill(name: "Kotlin", percentage: 0.85),
                     Skill(name: "Node.js", percentage: 0.75),
-                    Skill(name: "Git", percentage: 0.85),
+                    Skill(name: "Git", percentage: 0.90),
                     Skill(name: "Python", percentage: 0.70),
                   ],
                 ),
@@ -44,10 +43,10 @@ class SideMenu extends StatelessWidget {
                 SkillCategory(
                   title: "Soft Skills",
                   skills: [
-                    Skill(name: "Creative Thinking", percentage: 0.90),
-                    Skill(name: "Strategic Planning", percentage: 0.85),
-                    Skill(name: "Public Relations", percentage: 0.80),
-                    Skill(name: "Teamwork", percentage: 0.95),
+                    Skill(name: "Creative Thinking", percentage: 0.85),
+                    Skill(name: "Strategic Planning", percentage: 0.95),
+                    Skill(name: "Public Relations", percentage: 0.90),
+                    Skill(name: "Teamwork", percentage: 0.85),
                   ],
                 ),
                 const SizedBox(height: defaultPadding),
@@ -55,12 +54,12 @@ class SideMenu extends StatelessWidget {
                 SkillCategory(
                   title: "Tools & Technologies",
                   skills: [
-                    Skill(name: "Android Studio", percentage: 0.85),
+                    Skill(name: "Android Studio", percentage: 0.95),
                     Skill(name: "VS Code", percentage: 0.90),
                     Skill(name: "Postman", percentage: 0.80),
-                    Skill(name: "Figma", percentage: 0.75),
-                    Skill(name: "Microsoft Office", percentage: 0.85),
-                    Skill(name: "Google Workspace", percentage: 0.85),
+                    Skill(name: "Figma", percentage: 0.90),
+                    Skill(name: "Microsoft Office", percentage: 0.90),
+                    Skill(name: "Google Workspace", percentage: 0.95),
                   ],
                 ),
               ],
