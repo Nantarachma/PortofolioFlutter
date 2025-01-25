@@ -5,8 +5,8 @@ import 'package:portofolio_website/screen/home/component/project_gridview.dart';
 import 'experience_gridview.dart';
 import 'certificate_gridview.dart';
 
-class MyProject extends StatelessWidget {
-  const MyProject({
+class ContentPage extends StatelessWidget {
+  const ContentPage({
     Key? key,
   }) : super(key: key);
 
@@ -47,44 +47,44 @@ class MyProject extends StatelessWidget {
     );
   }
 
-  Widget _buildExperienceSection(BuildContext context) {
-    return Responsive(
-      mobile: ExperienceGridView(
-        crossAxisCount: 1,
-        childAspectRatio: 1.7,
-      ),
-      mobileLarge: ExperienceGridView(
-        crossAxisCount: 2,
-        childAspectRatio: 1.5,
-      ),
-      tablet: ExperienceGridView(
-        crossAxisCount: 2,
-        childAspectRatio: 1.7,
-      ),
-      desktop: ExperienceGridView(
-        crossAxisCount: 2,
-        childAspectRatio: 1.8,
-      ),
-    );
-  }
-
   Widget _buildProjectSection(BuildContext context) {
     return Responsive(
       mobile: ProjectGridView(
         crossAxisCount: 1,
-        childAspectRatio: 1.5, // Card lebih tinggi untuk mobile
+        childAspectRatio: 1.3,        // Adjusted from 1.5
       ),
       mobileLarge: ProjectGridView(
         crossAxisCount: 2,
-        childAspectRatio: 1.8, // Sedikit lebih tinggi untuk tablet
+        childAspectRatio: 1.6,        // Adjusted from 1.8
       ),
       tablet: ProjectGridView(
         crossAxisCount: 2,
-        childAspectRatio: 1.8,
+        childAspectRatio: 1.7,        // Adjusted from 1.8
       ),
       desktop: ProjectGridView(
-        crossAxisCount: 2, // Tetap 2 kolom
-        childAspectRatio: 2, // Sedikit lebih lebar untuk desktop
+        crossAxisCount: 2,
+        childAspectRatio: 1.9,        // Adjusted from 2.0
+      ),
+    );
+  }
+
+  Widget _buildExperienceSection(BuildContext context) {
+    return Responsive(
+      mobile: ExperienceGridView(
+        crossAxisCount: 1,
+        childAspectRatio: 1.5,        // Adjusted from 1.7
+      ),
+      mobileLarge: ExperienceGridView(
+        crossAxisCount: 2,
+        childAspectRatio: 1.4,        // Adjusted from 1.5
+      ),
+      tablet: ExperienceGridView(
+        crossAxisCount: 2,
+        childAspectRatio: 1.6,        // Adjusted from 1.7
+      ),
+      desktop: ExperienceGridView(
+        crossAxisCount: 2,
+        childAspectRatio: 1.7,        // Adjusted from 1.8
       ),
     );
   }
@@ -93,19 +93,19 @@ class MyProject extends StatelessWidget {
     return Responsive(
       mobile: CertificateGridView(
         crossAxisCount: 1,
-        childAspectRatio: 1.5, // More height for mobile
+        childAspectRatio: 1.3,        // Adjusted from 1.5
       ),
       mobileLarge: CertificateGridView(
         crossAxisCount: 2,
-        childAspectRatio: 1.7,
+        childAspectRatio: 1.5,        // Adjusted from 1.7
       ),
       tablet: CertificateGridView(
         crossAxisCount: 2,
-        childAspectRatio: 1.7,
+        childAspectRatio: 1.6,        // Adjusted from 1.7
       ),
       desktop: CertificateGridView(
         crossAxisCount: 2,
-        childAspectRatio: 2,
+        childAspectRatio: 1.8,        // Adjusted from 2.0
       ),
     );
   }

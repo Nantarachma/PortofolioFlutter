@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio_website/constaint.dart';
 import 'package:portofolio_website/models/project.dart';
-import 'package:portofolio_website/screen/home/component/card_widget.dart';
+import 'package:portofolio_website/screen/home/component/project_card.dart';
 
 class ProjectGridView extends StatelessWidget {
   const ProjectGridView({
@@ -29,7 +29,7 @@ class ProjectGridView extends StatelessWidget {
               mainAxisSpacing: defaultPadding,
               childAspectRatio: childAspectRatio,
             ),
-            itemBuilder: (context, index) => CardWidget(
+            itemBuilder: (context, index) => ProjectCard(
               project: demo_projects[index],
             ),
           );
