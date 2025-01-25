@@ -3,8 +3,8 @@ import 'package:portofolio_website/constaint.dart';
 import 'package:portofolio_website/models/project.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-class CardWidget extends StatefulWidget {
-  const CardWidget({
+class ProjectCard extends StatefulWidget {
+  const ProjectCard({
     Key? key,
     required this.project,
   }) : super(key: key);
@@ -12,10 +12,10 @@ class CardWidget extends StatefulWidget {
   final Project project;
 
   @override
-  State<CardWidget> createState() => _CardWidgetState();
+  State<ProjectCard> createState() => _ProjectCardState();
 }
 
-class _CardWidgetState extends State<CardWidget> {
+class _ProjectCardState extends State<ProjectCard> {
   bool isHovered = false;
 
   @override
