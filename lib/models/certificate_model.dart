@@ -93,6 +93,12 @@ final List<Certificate> certificates = [
     credentialUrl: 'https://www.dicoding.com/certificates/KEXL73QM4XG2',
   ),
   Certificate(
+    title: 'Belajar Membuat Aplikasi Flutter untuk Pemula',
+    issuer: 'Dicoding',
+    date: 'Jan 2025 - Jan 2028',
+    credentialUrl: 'https://www.dicoding.com/certificates/81P2LGR68ZOY',
+  ),
+  Certificate(
     title: 'Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)',
     issuer: 'Dicoding/AWS',
     date: 'Jan 2025 - Jan 2028',
