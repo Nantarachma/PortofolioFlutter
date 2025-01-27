@@ -13,6 +13,17 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: 'latest'
+
+    - name: Install dependencies
+      run: flutter pub get
+
+    - name: Build the project
+      run: flutter build web
+
     - name: Setup SSH
       uses: webfactory/ssh-agent@v0.5.3
       with:
@@ -27,12 +38,4 @@ jobs:
       run: ssh -p ${{ secrets.REMOTE_PORT }} ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "mkdir -p /home/${{ secrets.REMOTE_USER }}/public_html"
 
     - name: Deploy with Rsync
-      uses: easingthemes/ssh-deploy@v2.1.5
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        ARGS: "-avzr --delete"
-        SOURCE: "build/web/"
-        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-        REMOTE_USER: ${{ secrets.REMOTE_USER }}
-        TARGET: "/home/${{ secrets.REMOTE_USER }}/public_html"
-        REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+      run: rsync -avzr --delete -e "ssh -p ${{ secrets.REMOTE_PORT }}" build/web/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:/home/${{ secrets.REMOTE_USER }}/public_html
