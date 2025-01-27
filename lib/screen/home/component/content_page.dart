@@ -85,11 +85,11 @@ class ContentPage extends StatelessWidget {
     return Responsive(
       mobile: ExperienceGridView(
         crossAxisCount: 1,
-        childAspectRatio: 1.1,
+        childAspectRatio: 0.9,
       ),
       mobileLarge: ExperienceGridView(
         crossAxisCount: 1,
-        childAspectRatio: 1.1,
+        childAspectRatio: 1,
       ),
       tablet: ExperienceGridView(
         crossAxisCount: 2,
@@ -106,11 +106,11 @@ class ContentPage extends StatelessWidget {
     return Responsive(
       mobile: ProjectGridView(
         crossAxisCount: 1,
-        childAspectRatio: 1.1,
+        childAspectRatio: 0.8,
       ),
       mobileLarge: ProjectGridView(
         crossAxisCount: 1,
-        childAspectRatio: 1.1,
+        childAspectRatio: 1,
       ),
       tablet: ProjectGridView(
         crossAxisCount: 2,
@@ -127,11 +127,11 @@ class ContentPage extends StatelessWidget {
     return Responsive(
       mobile: CertificateGridView(
         crossAxisCount: 1,
-        childAspectRatio: 1.2,
+        childAspectRatio: 1.1,
       ),
       mobileLarge: CertificateGridView(
         crossAxisCount: 1,
-        childAspectRatio: 1.2,
+        childAspectRatio: 1.1,
       ),
       tablet: CertificateGridView(
         crossAxisCount: 2,
