@@ -4,32 +4,30 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.27.3' 
+    - name: Setup SSH
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      
+    - name: Create target directory
+      run: ssh -p ${{ secrets.REMOTE_PORT }} ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "mkdir -p /home/${{ secrets.REMOTE_USER }}/public_html"
 
-      - name: Install dependencies
-        run: flutter pub get
-
-      - name: Build for web
-        run: flutter build web
-      - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@main
-        env:
-            SOURCE: "build/web/"
-            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-            REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-            REMOTE_USER: ${{ secrets.REMOTE_USER }}
-            TARGET: ${{ secrets.REMOTE_TARGET }}
-            REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+    - name: Deploy with Rsync
+      uses: easingthemes/ssh-deploy@v2.1.5
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        ARGS: "-avzr --delete"
+        SOURCE: "build/web/"
+        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+        REMOTE_USER: ${{ secrets.REMOTE_USER }}
+        TARGET: "/home/${{ secrets.REMOTE_USER }}/public_html"
+        REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
