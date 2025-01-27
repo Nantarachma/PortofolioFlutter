@@ -127,11 +127,11 @@ class ContentPage extends StatelessWidget {
     return Responsive(
       mobile: CertificateGridView(
         crossAxisCount: 1,
-        childAspectRatio: 1.3,
+        childAspectRatio: 1.2,
       ),
       mobileLarge: CertificateGridView(
         crossAxisCount: 1,
-        childAspectRatio: 1.3,
+        childAspectRatio: 1.2,
       ),
       tablet: CertificateGridView(
         crossAxisCount: 2,
