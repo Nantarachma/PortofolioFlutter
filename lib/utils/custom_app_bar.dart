@@ -83,7 +83,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         },
       )
           : null,
-      // Perbaikan untuk title dan actions
       title: Row(
         children: [
           if (Responsive.isDesktop(context)) ...[
@@ -114,6 +113,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               onPressed: () => AppKeys.scrollToSection('projects', context),
             ),
             NavigationButton(
+              icon: Icons.groups_outlined, // Added icon for Leadership
+              title: "Volunteering",
+              onPressed: () => AppKeys.scrollToSection('leadership', context),
+            ),
+            NavigationButton(
               icon: Icons.verified_outlined,
               title: "Certificates",
               onPressed: () => AppKeys.scrollToSection('certificates', context),
@@ -142,6 +146,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         IconButton(
           icon: const Icon(Icons.code),
           onPressed: () => AppKeys.scrollToSection('projects', context),
+        ),
+        IconButton(
+          icon: const Icon(Icons.groups_outlined), // Added icon for Leadership
+          onPressed: () => AppKeys.scrollToSection('leadership', context),
         ),
         IconButton(
           icon: const Icon(Icons.verified_outlined),

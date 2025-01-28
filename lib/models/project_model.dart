@@ -68,7 +68,7 @@ List<Project> demo_projects = [
     sourceCode: "https://github.com/Nantarachma/Asclepius-Submission-Dicoding",
     tags: ["Kotlin", "TensorFlow Lite", "Healthcare", "AI"],
     thumbnail: "assets/images/dicoding.png",
-    createdAt: DateTime(2023, 10),
+    createdAt: DateTime(2024, 10),
   ),
   Project(
     title: "Resep Makanan Antarkita",

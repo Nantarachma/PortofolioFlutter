@@ -4,6 +4,7 @@ import '../../../utils/global_keys.dart';
 import '../../../utils/responsive.dart';
 import 'certificate/certificate_gridview.dart';
 import 'experience/experience_gridview.dart';
+import 'leadership/leadership_activities_gridview.dart';
 import 'project/project_gridview.dart';
 
 class ContentPage extends StatelessWidget {
@@ -47,6 +48,20 @@ class ContentPage extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(height: defaultPadding * 2),
+
+              Container(
+                key: AppKeys.keys['leadership'], // Menggunakan AppKeys.keys
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _buildSectionTitle(context, "Volunteering"),
+                    const SizedBox(height: defaultPadding),
+                    leadershipActivities(context),
+                  ],
+                ),
+              ),
+
               const SizedBox(height: defaultPadding * 2),
 
               // Certificates Section
@@ -118,7 +133,7 @@ class ContentPage extends StatelessWidget {
       ),
       desktop: ProjectGridView(
         crossAxisCount: 2,
-        childAspectRatio: 1.9,
+        childAspectRatio: 1.5,
       ),
     );
   }
@@ -143,4 +158,21 @@ class ContentPage extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget leadershipActivities(BuildContext context) {
+  return Responsive(
+    mobile: LeadershipActivitiesGridView(
+      crossAxisCount: 1,
+      childAspectRatio: 0.5,
+    ),
+    tablet: LeadershipActivitiesGridView(
+      crossAxisCount: 2,
+      childAspectRatio: 0.7,
+    ),
+    desktop: LeadershipActivitiesGridView(
+      crossAxisCount: 2,
+      childAspectRatio: 0.8,
+    ),
+  );
 }
