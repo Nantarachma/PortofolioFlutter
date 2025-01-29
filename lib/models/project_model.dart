@@ -50,14 +50,13 @@ class Project {
   }
 }
 
-// Demo projects dengan data yang lebih lengkap
 List<Project> demo_projects = [
   Project(
     title: "SHARA (Skin Health And Recommendation App)",
     description: "A mobile app to scan your face and give you advice about skincare.",
     link: "https://github.com/WinasPutra/SHARA-C242-PS321",
     sourceCode: "https://github.com/WinasPutra/SHARA-C242-PS321",
-    tags: ["Kotlin", "Machine Learning", "Healthcare", "Mobile App"],
+    tags: ["Kotlin", "Cloud Computing", "Machine Learning", "Healthcare", "Mobile App"],
     thumbnail: "assets/images/shara.png",
     createdAt: DateTime(2024, 12),
   ),
@@ -85,5 +84,13 @@ List<Project> demo_projects = [
     tags: ["UML", "System Design", "Education"],
     thumbnail: "assets/images/upnvjt.png",
     createdAt: DateTime(2024, 2),
+  ),
+  Project(
+    title: "Publish Journal for Indonesian Course Relation to Chat GPT",
+    description: "This journal examines the use of Chat GPT technology in Indonesian language learning, student responses, and the impact on learning outcomes.",
+    link: "https://jtuah.ejournal.unri.ac.id/index.php/JTUAH/article/view/8032",
+    tags: ["Research", "Education", "AI", "Journal", "Indonesian"],
+    thumbnail: "assets/images/upnvjt.png",
+    createdAt: DateTime(2023, 6),
   ),
 ];

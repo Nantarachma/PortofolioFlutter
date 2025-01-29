@@ -164,7 +164,7 @@ Widget leadershipActivities(BuildContext context) {
   return Responsive(
     mobile: LeadershipActivitiesGridView(
       crossAxisCount: 1,
-      childAspectRatio: 0.4,
+      childAspectRatio: 0.5,
     ),
     tablet: LeadershipActivitiesGridView(
       crossAxisCount: 2,

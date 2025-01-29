@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portofolio_website/constant/constant.dart';
 
 import '../../../utils/responsive.dart';
-import 'content/my_info.dart';
 import 'content/skill_set.dart';
 
 
@@ -34,14 +33,6 @@ class DrawerWeb extends StatelessWidget {
           ),
           child: Column(
             children: [
-              const SizedBox(height: defaultPadding),
-              const MyInfo(), // Personal info
-              const Divider(
-                color: secondaryColor,
-                thickness: 0.5,
-                height: defaultPadding * 2,
-              ),
-              // Menggunakan SideMenu yang sudah ada
               const SideMenu(),
             ],
           ),

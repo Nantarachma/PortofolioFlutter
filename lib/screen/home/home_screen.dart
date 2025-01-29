@@ -28,6 +28,17 @@ class HomeScreen extends StatelessWidget {
                   ? kMobilePadding
                   : kTabletPadding),
               const ContentPage(),
+              // Footer
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                    '© 2025 Rachmananta Ibnu Fajar',
+                    style: Theme.of(context).textTheme.labelLarge,
+                  ),
+                ),
+              )
             ],
           ),
         ),

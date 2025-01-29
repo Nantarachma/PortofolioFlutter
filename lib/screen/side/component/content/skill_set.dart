@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio_website/constant/constant.dart';
 import 'download_cv.dart';
+import 'my_info.dart';
 import 'social_media.dart';
 
 class SideMenu extends StatelessWidget {
@@ -19,6 +20,12 @@ class SideMenu extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const MyInfo(),
+                const Divider(
+                  color: secondaryColor,
+                  thickness: 0.5,
+                  height: defaultPadding * 2,
+                ),
                 Text(
                   "Skills & Expertise",
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
