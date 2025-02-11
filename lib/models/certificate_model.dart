@@ -135,7 +135,7 @@ final List<Certificate> certificates = [
     credentialUrl: 'https://www.dicoding.com/certificates/6RPNRWL79X2M',
   ),
   Certificate(
-    title: 'Sertifikat EF SET Bahasa Inggris 61/100 (C1 Lanjut)',
+    title: 'Belajar Dasar Visualisasi Data',
     issuer: 'Dicoding',
     date: 'Feb 2025 - Feb 2028',
     credentialUrl: 'https://www.dicoding.com/certificates/JMZVE963NPN9',
