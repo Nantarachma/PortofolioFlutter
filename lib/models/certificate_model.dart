@@ -128,4 +128,16 @@ final List<Certificate> certificates = [
     date: 'Jan 2025 - Jan 2028',
     credentialUrl: 'https://cert.efset.org/id/MVjjRb',
   ),
+  Certificate(
+    title: 'Memulai Pemrograman dengan Python)',
+    issuer: 'Dicoding',
+    date: 'Feb 2025 - Feb 2028',
+    credentialUrl: 'https://www.dicoding.com/certificates/6RPNRWL79X2M',
+  ),
+  Certificate(
+    title: 'Sertifikat EF SET Bahasa Inggris 61/100 (C1 Lanjut)',
+    issuer: 'Dicoding',
+    date: 'Feb 2025 - Feb 2028',
+    credentialUrl: 'https://www.dicoding.com/certificates/JMZVE963NPN9',
+  ),
 ];
